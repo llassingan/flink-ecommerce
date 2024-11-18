@@ -8,11 +8,11 @@ from datetime import datetime
 
 fake = Faker()
 
-# for generate fake transaction 
+# buat generate fake transaction 
 def generate_sales_transaction():
-
+    # init fake user 
     user = fake.simple_profile() 
-
+    # return json transaction 
     return {
         "transactionId": fake.uuid4(),
         "productId": random.choice(['product1', 'product2', 'product3', 'product4', 'product5', 'product6']),
@@ -27,7 +27,7 @@ def generate_sales_transaction():
         "paymentMethod": random.choice(['credit_card', 'debit_card', 'online_transfer'])
     }
 
-
+# delivery_report for producer 
 def delivery_report(err,msg):
     if err is not None:
         print(f"Message delivery failed: {err}")

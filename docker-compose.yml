@@ -105,7 +105,7 @@ services:
         parallelism.default: 2
         jobmanager.memory.process.size: 1600m
     volumes:
-      - ./flinkecommerce/target:/opt/flink/usrlib
+      - ./target:/opt/flink/usrlib
     networks:
       - flink-network
 

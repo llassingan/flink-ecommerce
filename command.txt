@@ -1,0 +1,15 @@
+HOW TO RUN:
+
+Jar File:
+- package using maven: mvn package
+
+Producer (Run this so there will be a topic to subscribe):
+requirements:
+- faker
+- confluent_kafka
+
+python main.py
+
+
+Flink Job:
+docker exec -it jobmanager ./bin/flink run -c flinkecommerce.DataStreamJob /opt/flink/usrlib/flinkecommerce-1.0-SNAPSHOT.jar
